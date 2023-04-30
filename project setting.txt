@@ -1,0 +1,17 @@
+1. node.js install
+ - node -v
+ - npm -v
+
+2. yarn install (choose)
+ - npm install --global yarn
+ - yarn -v
+
+3. create react project
+ - yarn create react-app {Project Name}
+   ※ create failed
+      - yarn cache clean
+      - npx create-react-app {Project Name}
+
+4. project start
+ - yarn start
+ - npm start

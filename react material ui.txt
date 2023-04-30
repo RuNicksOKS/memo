@@ -1,0 +1,16 @@
+1. install
+ - npm install @material-ui/core
+   - npm install @material-ui/core --legacy-peer-deps (패키지 의존 react 버전과 호환되지 않을때 강제 설치)
+ - yarn add @material-ui/core
+
+ - npm install @mui/material @emotion/react @emotion/styled
+   - npm install @mui/material @emotion/react @emotion/styled --force (패키지 의존 react 버전과 호환되지 않을때 강제 설치)
+
+ SVG Icons
+ - npm install @material-ui/icons
+   - npm install @material-ui/icons --force (패키지 의존 react 버전과 호환되지 않을때 강제 설치)
+ - yarn add @material-ui/icons
+
+2. import
+ - App.js
+   import { Textfield , Button } from '@material-ui/core'
