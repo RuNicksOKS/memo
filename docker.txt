@@ -1,0 +1,17 @@
+1. nginx 설치
+ - docker pull nginx (nginx 이미지를 다운로드)
+ - docker run --name {containar name} -p {local port}:{docker containar port} -d {docker images name} (이미지를 컨테이너화해 도커실행)
+   ( -p 옵션으로 도커에서 실행되는 포트와 현재 호스트가 되는 내 PC의 포트를 연결. 
+     ex) 내 PC 8000번 포트에 도커 컨테이너 80 포트를 포트 포워딩 = 8000:80
+     -d 옵션으로 detached mode 즉 백그라운드로 실행을 시키겠다는 의미 )
+   docker run --name nginx -p 8000:80 -d nginx
+ 
+
+
+
+
+모든 실행중인 도커 이미지 일괄 중지
+ - for /f "tokens=*" %i in ('docker ps -aq') do docker stop %i
+
+모든 이미지 일괄 삭제
+ - docker system prune -a

@@ -8,6 +8,7 @@
 
 3. create react project
  - yarn create react-app {Project Name}
+ - npx create-react-app {Project Name} --template typescript (create typescipt react)
    ※ create failed
       - yarn cache clean
       - npx create-react-app {Project Name}

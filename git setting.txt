@@ -23,3 +23,6 @@
 
 6. reset (chooice reset)
  - git checkout -- {file name} ( ex) src/filename.py )
+
+7. git clone (git에 있는 파일을 로컬로 가져오기)
+ - git clone {git https URL} 

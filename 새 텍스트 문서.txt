@@ -1,0 +1,75 @@
+backend 폴더의 파일 및 폴더 구성
+
+폴더:
+app 폴더: Django 애플리케이션 폴더
+requirements 폴더: 필요한 라이브러리와 패키지 목록을 담은 폴더
+
+파일:
+app/settings/base.py: Django 애플리케이션의 기본 설정 파일
+app/settings/local.py: 로컬 개발 환경 설정 파일
+app/settings/production.py: 프로덕션 환경 설정 파일
+app/asgi.py: ASGI 설정 파일
+app/urls.py: URL 라우팅을 담당하는 파일
+app/wsgi.py: WSGI 설정 파일
+app/manage.py: Django의 관리 명령어를 실행하는 파일
+Dockerfile: 개발 환경용 Docker 이미지를 생성하기 위한 파일
+Dockerfile.prod: 프로덕션 환경용 Docker 이미지를 생성하기 위한 파일
+entrypoint.sh: 개발 환경용 컨테이너 진입 시 실행되는 스크립트 파일
+
+파일 내용:
+Dockerfile: Python 3.11.3-slim을 기반으로 작성되며 필요한 라이브러리 설치와 애플리케이션 실행을 위한 설정을 포함
+entrypoint.sh: PostgreSQL 데이터베이스에 대기하고 마이그레이션과 정적 파일 수집 등의 작업을 실행한 후, 컨테이너 실행을 위한 명령어를 실행
+manage.py: Django 애플리케이션의 관리 명령어를 실행하기 위한 파일
+asgi.py: ASGI 애플리케이션 설정 파일로, Django 애플리케이션을 ASGI 서버에서 실행하기 위한 설정을 포함
+urls.py: URL 라우팅을 설정하는 파일로, 요청된 URL 경로를 뷰 함수나 클래스에 매핑하는 역할을 함
+wsgi.py: WSGI 애플리케이션 설정 파일로, Django 애플리케이션을 WSGI 서버에서 실행하기 위한 설정을 포함
+-------------------------------------------------------------------------
+frontend 폴더의 파일 및 폴더 구성
+
+폴더:
+build: 빌드된 프로덕션 코드가 저장되는 폴더입니다.
+nginx: NGINX 서버 설정 파일과 관련된 파일이 있는 폴더입니다.
+node_modules: 프로젝트의 의존성 모듈이 설치되는 폴더입니다.
+public: 정적 파일 (이미지, HTML 파일 등)이 위치하는 폴더입니다.
+src: 프로젝트의 소스 코드 파일들이 있는 폴더입니다.
+
+파일:
+Dockerfile: 개발환경을 위한 도커 파일입니다.
+Dockerfile.prod: 프로덕션 환경을 위한 도커 파일입니다.
+package-lock.json: 프로젝트의 의존성 모듈에 대한 세부 정보가 포함된 파일입니다.
+package.json: 프로젝트의 의존성 모듈과 스크립트 등에 대한 설정이 들어있는 파일입니다.
+tsconfig.json: TypeScript 설정 파일로, TypeScript 프로젝트의 컴파일 옵션을 지정합니다.
+-----------------------------------------------------------------------------------------------------
+backend 폴더의 파일 구성:
+
+manage.py: Django 프로젝트의 관리를 위한 명령어 유틸리티 파일입니다.
+app 폴더:
+settings 폴더:
+base.py: Django 설정 파일의 기본 설정이 들어 있는 파일입니다.
+local.py: 로컬 환경에서 사용할 Django 설정 파일입니다.
+production.py: 프로덕션 환경에서 사용할 Django 설정 파일입니다.
+init.py: Python 패키지를 정의하는 빈 파일입니다.
+asgi.py: ASGI(Asynchronous Server Gateway Interface) 설정 파일로, Django 애플리케이션의 ASGI 엔트리 포인트를 정의합니다.
+urls.py: Django 애플리케이션의 URL 라우팅을 설정하는 파일입니다.
+wsgi.py: WSGI(Web Server Gateway Interface) 설정 파일로, Django 애플리케이션의 WSGI 엔트리 포인트를 정의합니다.
+frontend 폴더의 파일 및 폴더 구성:
+
+build 폴더: 빌드된 프론트엔드 애플리케이션 파일이 위치하는 폴더입니다.
+nginx 폴더: Nginx 웹 서버의 설정 파일이 위치하는 폴더입니다.
+node_modules: 프론트엔드 의존성 패키지들이 설치되는 폴더입니다.
+public 폴더: 정적 파일이 위치하는 폴더입니다.
+src 폴더: React 애플리케이션의 소스 코드가 위치하는 폴더입니다.
+App.css: React 애플리케이션의 기본 CSS 스타일 파일입니다.
+App.js: React 애플리케이션의 기본 컴포넌트 파일입니다.
+App.test.js: React 애플리케이션의 테스트 파일입니다.
+App.test.tsx: React 애플리케이션의 TypeScript 테스트 파일입니다.
+App.tsx: React 애플리케이션의 TypeScript 기본 컴포넌트 파일입니다.
+index.css: 애플리케이션의 인덱스 HTML 파일에 적용되는 CSS 스타일 파일입니다.
+index.js: 애플리케이션의 인덱스 JavaScript 파일입니다.
+index.tsx: 애플리케이션의 인덱스 TypeScript 파일입니다.
+logo.svg: React 애플리케이션의 로고 이미지 파일입니다.
+react-app-env.d.ts: React 애플리케이션의 TypeScript 타입 정의 파일입니다.
+reportWebVitals.js: 웹 성능 측정을 위한 파일입니다.
+reportWebVitals.ts: TypeScript로 작성된 웹 성능 측정 파일입니다.
+setupTests.js: 테스트 환경 설정 파일입니다.
+setupTests.ts: TypeScript로 작성된 테스트 환경 설정 파일입니다.
